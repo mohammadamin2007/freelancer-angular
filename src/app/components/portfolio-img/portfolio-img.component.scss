@@ -1,0 +1,19 @@
+@import "../../../assets/variables";
+.portfolio-img{
+  cursor: pointer;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  .portfolio-img-hover-icon{
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    background-color: $main-theme-color;
+    svg{
+      color: $main-theme-text-color;
+    }
+  }
+}
+.portfolio-img:hover{
+  .portfolio-img-hover-icon{
+    opacity: 1;
+  }
+}

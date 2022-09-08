@@ -1,0 +1,43 @@
+@import "../../../assets/variables";
+footer{
+  padding: 5rem 0;
+  background-color: rgb(44, 62, 80);
+  .container{
+    .row{
+      .address, .communication-ways, .description{
+        .title{
+          color: $main-theme-text-color !important;
+        }
+        .content{
+          color: $main-theme-text-color !important;
+        }
+        a:not(.spacial-link){
+          color: $main-theme-text-color !important;
+        }
+      }
+    }
+    div{
+      .lead{
+        font-weight: 400 !important;
+      }
+    }
+    .communication-ways{
+      .social-ball{
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 50%;
+        font-size: 1.25rem;
+      }
+    }
+    .description{
+      p{
+        a{
+          color: $main-theme-color;
+        }
+        a:hover{
+          color: $main-theme-color-hover;
+        }
+      }
+    }
+  }
+}

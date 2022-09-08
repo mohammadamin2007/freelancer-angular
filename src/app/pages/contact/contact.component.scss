@@ -1,0 +1,89 @@
+@import "../../../assets/variables";
+#contact{
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  .container{
+    .contact-title{
+      h2{
+        color: $secondary-texts;
+        font-size: 2.25rem;
+        line-height: 2rem;
+        @media screen and (min-width: 992px) {
+          font-size: 3rem;
+          line-height: 2.5rem;
+        }
+      }
+      .star-container{
+        margin: 1.25rem 0 1.5rem;
+        .star{
+          font-size: 2.3rem;
+          color: $secondary-texts;
+        }
+        .star-line{
+          width: 100%;
+          max-width: 7rem;
+          align-self: center;
+          height: 0.25rem;
+          border-radius: 1rem;
+          background-color: $secondary-texts;
+        }
+      }
+    }
+    form{
+      .form-floating-customized{
+        .invalid-feedback{
+          display: flex !important;
+        }
+        .form-control{
+          padding: 1.5rem 0;
+          font-size: 1.5rem;
+          border-left: 0;
+          border-right: 0;
+          border-top: 0;
+          border-radius: 0;
+          border-width: 1px;
+        }
+        .form-control:focus{
+          box-shadow: none;
+          border-bottom-color: rgba(26, 188, 156, 1);
+        }
+        .form-control.is-invalid {
+          border-color: #dc3545 !important;
+        }
+        textarea.form-control{
+          padding: 2.5rem calc(1.5em + 0.75rem) 2.5rem 0;
+        }
+        .form-control:not(:placeholder-shown) ~ label ,.form-control:focus ~ label{
+          opacity: 0.65;
+          transform: scale(0.65) translateY(-2.6rem);
+        }
+        .form-control::placeholder{
+          color: transparent;
+        }
+        label{
+          position: absolute;
+          pointer-events: none;
+          top: 0;
+          left: 0;
+          height: 100%;
+          padding: 1.5rem 0;
+          transform-origin: 0;
+          transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+          font-size: 1.5rem;
+          color: #6c757d;
+        }
+        #phone-number::-webkit-outer-spin-button,
+        #phone-number::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      .form-btn{
+        padding: 1rem 1.75rem;
+        font-size: 1.25rem;
+        background-color: rgba(26, 188, 156, 1) !important;
+        border-color: rgba(26, 188, 156, 1) ;
+      }
+    }
+  }
+}

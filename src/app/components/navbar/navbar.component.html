@@ -1,0 +1,15 @@
+<nav id="navbar" [ngClass]="{'padding-right-16': modalService.modalOpened, 'navbar-shrink': navbarService.shrinkNavbar}" class="navbar navbar-expand-lg text-uppercase fixed-top">
+  <div class="container">
+    <a routerLink="" class="navbar-brand fw-bold">
+      start boostrap
+    </a>
+    <button class="navbar-toggler text-uppercase" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">
+      menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+      <ul app-navbar-link (scrollIntoContainer)="scroll($event)" (toggleCo)="$event?collapse.toggle() : ''" class="navbar-nav nav flex-grow-1 justify-content-end mt-3 mt-lg-0">
+      </ul>
+    </div>
+  </div>
+</nav>

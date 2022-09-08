@@ -1,0 +1,23 @@
+@import "../../../assets/variables";
+// styles
+.active-nav-link{
+  @media screen and (min-width: 992px) {
+    color: $main-theme-text-color !important;
+    background: $main-theme-color ;
+  }
+  color: $main-theme-color !important;
+}
+.active-nav-link:hover{
+  @media screen and (min-width: 992px) {
+    color: white !important;
+    background: $main-theme-color;
+  }
+}
+.nav-item{
+  .nav-link{
+    color: $main-theme-text-color;
+  }
+  .nav-link:hover{
+    color: $main-theme-color;
+  }
+}

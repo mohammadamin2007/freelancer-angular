@@ -1,0 +1,46 @@
+@import "../../../assets/variables";
+.padding-right-16{
+  padding-right: 16px;
+}
+#navbar{
+  background-color: rgba( 44, 62, 80, 1);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @media screen and (min-width: 992px){
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+  }
+  .container{
+    .navbar-brand {
+      color: $main-theme-text-color;
+      @media screen and (min-width: 992px){
+        font-size: 1.75em;
+        transition: font-size 0.3s;
+      }
+      font-size: 1.25em;
+    }
+    .navbar-toggler{
+      padding: .8rem;
+      font-size: 89%;
+      color: $main-theme-text-color;
+      background-color: $main-theme-color;
+    }
+  }
+}
+#navbar.navbar-shrink{
+  @media screen and (min-width: 992px) {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+  }
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .container{
+    .navbar-brand{
+      @media screen and (min-width: 992px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,49 @@
+@import "../../../assets/variables";
+#header{
+  background-color: $main-theme-color;
+  padding-top: calc(6rem + 74px);
+  @media screen and (min-width: 992px) {
+    padding-top: calc(6rem + 104px) !important;
+  }
+  padding-bottom: 6rem;
+  .container{
+    .header-img{
+      img{
+        width: 15rem;
+      }
+    }
+    .header-text{
+      .title{
+        font-size: 2.75rem;
+        line-height: 2.75rem;
+        color: $main-theme-text-color;
+        @media screen and (min-width: 992px) {
+          font-size: 4rem;
+          line-height: 3.5rem !important;
+        }
+      }
+      .star-container{
+        margin: 1.25rem 0 1.5rem;
+        .star{
+          font-size: 2.3rem;
+          color: $main-theme-text-color;
+        }
+        .star-line{
+          background-color: $main-theme-text-color;
+          width: 100%;
+          max-width: 7rem;
+          align-self: center;
+          height: 0.25rem;
+          border-radius: 1rem;
+        }
+      }
+      .header-description{
+        color: $main-theme-text-color;
+        font-size: 1.25rem;
+        @media screen and (min-width: 992px) {
+          font-size: 1.5rem !important;
+        }
+      }
+    }
+  }
+}

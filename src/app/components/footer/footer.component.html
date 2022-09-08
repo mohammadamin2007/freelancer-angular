@@ -1,0 +1,36 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="address col-lg-4 mb-5 mb-lg-0">
+        <div class="title text-center fw-bold">
+          <p class="h4 mb-4">{{ footerTexts[0] | uppercase }}</p>
+        </div>
+        <div class="content text-center">
+          <p class="lead">
+            2215 John Daniel Drive
+            <br>
+            Clark, MO 65243
+          </p>
+        </div>
+      </div>
+      <div class="communication-ways col-lg-4 mb-5 mb-lg-0">
+        <div class="title text-center">
+          <p class="h4 mb-4">{{ footerTexts[1] | uppercase }}</p>
+        </div>
+        <div class="content d-flex justify-content-center">
+          <a *ngFor="let id of socialIcons" id="{{ id.icon }}" class="social-ball spacial-link d-flex  justify-content-center btn btn-outline-light mx-1">
+            <i class="fa fa-{{ id.icon }} align-self-center d-flex"></i>
+          </a>
+        </div>
+      </div>
+      <div class="description col-lg-4">
+        <div class="title text-center">
+          <p class="h4 mb-4">{{ footerTexts[2] | uppercase }}</p>
+        </div>
+        <div class="content text-center">
+          <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by <a href="#" class="spacial-link">Start Bootstrap.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

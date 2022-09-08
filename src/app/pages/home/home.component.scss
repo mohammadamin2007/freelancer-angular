@@ -1,0 +1,9 @@
+@import "../../../assets/variables";
+#copyright{
+  background-color: #1a252f;
+  .container{
+    p{
+      color: $main-theme-text-color;
+    }
+  }
+}

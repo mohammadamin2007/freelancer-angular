@@ -1,0 +1,51 @@
+@import "../../../assets/variables";
+.modal{
+  background-color: $modal-background-color;
+  .modal-dialog{
+    .modal-content{
+      background-color: $modal-body-background-color;
+      .modal-header{
+        font-size: 2rem;
+        padding: 1rem;
+      }
+      .modal-body{
+        .container{
+          .title{
+            @media screen and (min-width: 992px) {
+              font-size: 3rem;
+              line-height: 2.5rem;
+            }
+            font-size: 2.25rem;
+            line-height: 2rem;
+          }
+          .star-container{
+            margin: 1.25rem 0 1.5rem;
+            .star{
+              font-size: 2.3rem;
+            }
+            .star-line{
+              width: 100%;
+              max-width: 7rem;
+              align-self: center;
+              height: 0.25rem;
+              border-radius: 1rem;
+            }
+          }
+          .btn-container{
+            .btn-primary-customized{
+              color: $main-theme-text-color;
+              background-color: $main-theme-color;
+              border-color: $main-theme-color;
+            }
+            .btn-primary-customized:focus{
+              color: $main-theme-text-color;
+              background-color: $main-theme-color-hover;
+              border-color: $main-theme-color-hover;
+              box-shadow: $main-theme-color-hover-box-shadow;
+            }
+          }
+        }
+      }
+    }
+  }
+}

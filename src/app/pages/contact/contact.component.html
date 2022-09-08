@@ -1,0 +1,60 @@
+<section id="contact" class="page-container">
+  <div class="container">
+    <div class="contact-title">
+      <h2 class="text-uppercase d-flex justify-content-center fw-bold">
+        <span>contact me</span>
+      </h2>
+      <div class="star-container d-flex justify-content-center">
+        <div class="star-line me-3"></div>
+        <div class="star"><i class="fa fa-star"></i></div>
+        <div class="star-line ms-3"></div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="col-lg-8 col-xl-7">
+        <form action="#" [formGroup]="contactForm" id="contact-form" class="has-validation">
+          <div class="form-floating-customized position-relative mb-3">
+            <input type="text" id="name" name="name" formControlName="name" [ngClass]="{'is-invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}" placeholder="enter your name" class="form-control">
+            <label for="name" class="position-absolute">Full name</label>
+            <div id="name-required" class="invalid-feedback" *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)">
+              <div *ngIf="contactForm.get('name')?.errors?.['required']">
+                A name is required
+              </div>
+            </div>
+          </div>
+          <div class="form-floating-customized position-relative mb-3">
+            <input type="email" id="email" formControlName="email" name="email" placeholder="enter your email" [ngClass]="{'is-invalid': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}" class="form-control" email="email">
+            <label for="email" class="position-absolute">Email address</label>
+            <div class="invalid-feedback" *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)">
+              <div id="email-required" *ngIf="contactForm.get('email')?.errors?.['required']">
+                An email is required
+              </div>
+              <div id="email-invalid" *ngIf="contactForm.get('email')?.errors?.['email']">
+                Email is not valid.
+              </div>
+            </div>
+          </div>
+          <div class="form-floating-customized position-relative mb-3">
+            <input type="number" id="phone-number" formControlName="phone" name="number" required placeholder="enter your phone number" [ngClass]="{'is-invalid': contactForm.get('phone')?.invalid && (contactForm.get('phone')?.touched)}" class="form-control">
+            <label for="phone-number" class="position-absolute">Phone number</label>
+            <div id="phone-required" class="invalid-feedback" *ngIf="contactForm.get('phone')?.invalid && (contactForm.get('phone')?.touched || contactForm.get('phone')?.dirty)">
+              <div *ngIf="contactForm.get('phone')?.errors?.['required']">
+                A phone number is required
+              </div>
+            </div>
+          </div>
+          <div class="form-floating-customized position-relative mb-3">
+            <textarea id="message" name="message" formControlName="textArea" class="form-control" required placeholder="enter your massage" [ngClass]="{'is-invalid': contactForm.get('textArea')?.invalid && (contactForm.get('textArea')?.touched)}" style="height: 10rem;"></textarea >
+            <label for="message" class="position-absolute">Message</label>
+            <div id="message-required" class="invalid-feedback" *ngIf="contactForm.get('textArea')?.invalid && (contactForm.get('textArea')?.touched || contactForm.get('textArea')?.dirty)">
+              <div *ngIf="contactForm.get('textArea')?.errors?.['required']">
+                A massage is required
+              </div>
+            </div>
+          </div>
+          <button type="submit" [disabled]="contactForm.invalid" class="btn btn-primary form-btn">send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

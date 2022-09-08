@@ -1,0 +1,8 @@
+<!-- navbar-start -->
+<app-navbar (scrollIntoContainer)="scroll($event)"></app-navbar>
+<!-- navbar-end -->
+<!-- routes -->
+<div [@fadeAnimation]="getAnimationData(router)">
+  <router-outlet #router="outlet"></router-outlet>
+</div>
+<!-- routes -->

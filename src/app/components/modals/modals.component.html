@@ -1,0 +1,32 @@
+<div *ngFor="let modalInfo of modalService.portfolioImagesList"
+     class="modal modal-xl fade"
+     [ngClass]="{'show': modalInfo.show, 'd-block': modalInfo.opened}"
+     id="{{ modalInfo.id}}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button class="btn-close" (click)="modalService.closeModal(modalInfo.id)"></button>
+      </div>
+      <div class="modal-body pb-5">
+        <div class="container d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="title text-uppercase text-secondary fw-bold d-flex justify-content-center">{{ modalInfo.title }}</h2>
+            <div class="star-container d-flex justify-content-center">
+              <div class="star-line me-3 bg-secondary"></div>
+              <div class="star text-secondary"><i class="fa fa-star"></i></div>
+              <div class="star-line ms-3 bg-secondary"></div>
+            </div>
+            <img src="{{ modalInfo.src }}" class="mb-5 img-fluid" alt="cake">
+            <p class="mb-5 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <div class="btn-container d-flex justify-content-center">
+              <button type="button" (click)="modalService.closeModal(modalInfo.id)" class="btn btn-primary-customized text-capitalize">
+                <i class="fa fa-times"></i>
+                close window
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
